@@ -1,4 +1,4 @@
-.header{
+.footer{
  color: #8F8F8F;
 text-align: center;
 font-family: Poppins;
@@ -6,4 +6,11 @@ font-size: 15px;
 font-style: normal;
 font-weight: 400;
 line-height: 123%; /* 18.45px */
+width:(1403.dp);
+height:(77.dp);
+padding:(start = 1143.55212.dp, top = 4.88293.dp, end = 33.44788.dp, bottom = 54.11707.dp);
+
+}
+.active{
+    color: red;
 }

@@ -2,20 +2,28 @@
     color: red;
 }
 
-.header{
-    color: #FFF;
+.div{
+    color: #7e0909;
     font-family: Inter;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     float: inline-end;
-    width: 1440px;
-    
-height: 1024px;
-Top:-1155px;
-Left:-1780px;
-border-radius: 25px;
+    width: 1440px;   
+    height: 1024px;
+    Top:-1155px;
+    Left:-1780px;
+    border-radius: 25px;
+}
 
-
+.sidebar{
+    background: Color(0xFF1B1A1A);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
 }
