@@ -10,6 +10,7 @@ import Settings from '../pages/Settings/Settings'
 import BandCreator from '../pages/BandCreator/BandCreator'
 import Invitations from '../pages/Invitations/Invitations'
 import Privatepolice from '../pages/Privatepolice/Privacypolicy'
+import Login from '../components/Auth/Login';
 
 
 
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
             {
                 path: "Private-police",
                 element: <Privatepolice />
+            },
+            {
+                path: "login",
+                element: <Login />
             },
            
            

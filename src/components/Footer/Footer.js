@@ -4,11 +4,10 @@ const Footer = () => {
 
     return (
         <footer className={styles.footer}> 
-        <div>
-        <p><NavLink to="/Private-police" className={({isActive}) => isActive ? styles.active : ''}>Home</NavLink></p>
-        </div>
-            
-           <h3>Copyright©BandBlender  </h3>     
+   
+      <h3>Copyright©BandBlender  </h3> 
+      
+               
         </footer>
     )
 }

@@ -1,24 +1,28 @@
 import { NavLink} from 'react-router-dom';
-import styles from './Navbar.module.css';
+import {AiOutlineHome, AiOutlineContacts} from "react-icons/ai"
+import {TiMessages} from "react-icons/ti"
+import {CgProfile} from "react-icons/cg"
+import {RiCalendarTodoFill} from "react-icons/ri"
+import {TbPencilExclamation} from "react-icons/tb"
+import {FiSettings} from "react-icons/fi"
+ import styles from './Navbar.module.css';
+
+
 
 const Navbar = () => {
     return (
-        <sidebar>
-            <nav>
-                <ul className={styles.sidebar}>
-                    <li><NavLink to="/" className={({isActive}) => isActive ? styles.active : ''}>Home</NavLink></li>
-                    <li><NavLink to="/contact" className={({isActive}) => isActive ? styles.active : ''}>Contact</NavLink></li>
-                    <li><NavLink to="/about-me" className={({isActive}) => isActive ? styles.active : ''}>About me</NavLink></li>
-                    <li><NavLink to="/Messages" className={({isActive}) => isActive ? styles.active : ''}>Messages</NavLink></li>
-                    <li><NavLink to="/Profile" className={({isActive}) => isActive ? styles.active : ''}>Profile</NavLink></li>
-                    <li><NavLink to="/Invitations" className={({isActive}) => isActive ? styles.active : ''}>Invitations</NavLink></li>
-                    <li><NavLink to="/Create-band" className={({isActive}) => isActive ? styles.active : ''}>BandCreator</NavLink></li>
-                    <li><NavLink to="/Settings" className={({isActive}) => isActive ? styles.active : ''}>Settings</NavLink></li>
-
-
-                </ul>
-            </nav>
-        </sidebar>
+        <nav className={styles.sidebar}>
+            <ul className={styles.navlist}>
+                <li className={styles.navItem}><NavLink to="/" className={({isActive}) => isActive ? styles.active : styles.link}><AiOutlineHome/>Home</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/contact" className={({isActive}) =>  isActive ? styles.active : styles.link}><AiOutlineContacts/>Contact</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/about-me" className={({isActive}) =>  isActive ? styles.active : styles.link}>About me</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/Messages" className={({isActive}) =>  isActive ? styles.active : styles.link}><TiMessages/>Messages</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/Profile" className={({isActive}) =>  isActive ? styles.active : styles.link}><CgProfile/>Profile</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/Invitations" className={({isActive}) =>  isActive ? styles.active : styles.link}><RiCalendarTodoFill/>Invitations</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/Create-band" className={({isActive}) =>  isActive ? styles.active : styles.link}><TbPencilExclamation/>BandCreator</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/Settings" className={({isActive}) =>  isActive ? styles.active : styles.link}><FiSettings/>Settings</NavLink></li>
+            </ul>
+        </nav>
     )
 }
 

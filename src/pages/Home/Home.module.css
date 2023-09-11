@@ -1,14 +1,9 @@
 div{
-width: 1170px;
-height: 478px;
-flex-shrink: 0;
-border-radius: 0px 25px 0px 0px;
 background: #1B1A1A;
 color: aliceblue;
+min-height: 100vh;
 }
-h1{
-width: 482px;
-height: 90px;
+.content h1{
 flex-shrink: 0;
 color: #EC3434;
 font-family: Smooch Sans;
@@ -16,11 +11,14 @@ font-size: 98px;
 font-style: normal;
 font-weight: 600;
 line-height: 108px; /* 110.204% */
-
-margin: left 90%; ;
+margin: right  ;
 
 }
-h2{
+.content {
+    flex: 1; /* Wykorzystaj dostępne miejsce */
+    padding: 20px;
+  }
+  .content h2{
     color: #E8E8E8;
 text-align: center;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -31,7 +29,7 @@ font-weight: 700;
 line-height: 144%; /* 34.56px */
 float: right;
 }
-p{
+.content p{
     width: 425px;
     color: #FFF;
 text-align: right;
@@ -42,4 +40,15 @@ font-weight: 700;
 line-height: normal;
 float: right;
 display: flex;
-flex-flow: column wrap;}
+}
+
+.login{
+  padding: 10px 68px;
+  color: #FFFFFF;
+  border-radius: 50px;
+  background-color: rgba(68,63,63,0.4);
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+
+}
