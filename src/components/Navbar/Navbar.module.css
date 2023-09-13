@@ -1,0 +1,17 @@
+
+.navItem{
+   margin-bottom: 20px;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.active{
+  color: red;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
