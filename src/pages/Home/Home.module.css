@@ -29,20 +29,19 @@ font-weight: 700;
 line-height: 144%; /* 34.56px */
 float: right;
 }
-.content p{
-    width: 425px;
-    color: #FFF;
-text-align: right;
-font-family: Inter;
-font-size: 10px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-float: right;
-display: flex;
-}
+
 
 .login{
+  padding: 10px 68px;
+  color: #FFFFFF;
+  border-radius: 50px;
+  background-color: rgba(68,63,63,0.4);
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+
+}
+.ghost{
   padding: 10px 68px;
   color: #FFFFFF;
   border-radius: 50px;
