@@ -1,77 +1,86 @@
-import React from 'react';
-import { registerUser } from '../../services/api';
+import React, { useContext, useState } from 'react';
+import axios from 'axios';
+import { AuthContext } from '../../contexts/AuthContext';
 
-class Register extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-    };
-  }
+const Register = () => {
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
 
-  handleInputChange = (event) => {
-    this.setState({
+  const { setAuthState } = useContext(AuthContext);
+
+  const handleInputChange = (event) => {
+    setFormData({
+      ...formData,
       [event.target.name]: event.target.value
     });
   };
 
-  handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if(this.state.password !== this.state.confirmPassword){
+    if(formData.password !== formData.confirmPassword){
       alert("Passwords do not match.");
       return;
     }
 
     try {
-      const user = await registerUser(this.state.username, this.state.email, this.state.password);
-      //  tutaj do wypełnienia - póki co console.log
+      const response = await axios.post('http://localhost:5000/api/auth/register', {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+      });
 
+      const user = response.data;
+
+      if (user && user.token) {
+        setAuthState(user);
+      }
+
+      // For now, just a console log.
       console.log(user);
+
     } catch (error) {
-      // tutaj do wypełnienia - póki co console.log
-      console.log(error);
+      console.error('Error during registration:', error);
     }
   };
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input 
-          type="text" 
-          name="username" 
-          placeholder="Username" 
-          value={this.state.username} 
-          onChange={this.handleInputChange} 
-        />
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Email" 
-          value={this.state.email} 
-          onChange={this.handleInputChange} 
-        />
-        <input 
-          type="password" 
-          name="password" 
-          placeholder="Password" 
-          value={this.state.password} 
-          onChange={this.handleInputChange} 
-        />
-        <input 
-          type="password" 
-          name="confirmPassword" 
-          placeholder="Confirm Password" 
-          value={this.state.confirmPassword} 
-          onChange={this.handleInputChange} 
-        />
-        <button type="submit">Register</button>
-      </form>
-    );
-  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="text" 
+        name="username" 
+        placeholder="Username" 
+        value={formData.username} 
+        onChange={handleInputChange} 
+      />
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Email" 
+        value={formData.email} 
+        onChange={handleInputChange} 
+      />
+      <input 
+        type="password" 
+        name="password" 
+        placeholder="Password" 
+        value={formData.password} 
+        onChange={handleInputChange} 
+      />
+      <input 
+        type="password" 
+        name="confirmPassword" 
+        placeholder="Confirm Password" 
+        value={formData.confirmPassword} 
+        onChange={handleInputChange} 
+      />
+      <button type="submit">Register</button>
+    </form>
+  );
 }
 
 export default Register;
