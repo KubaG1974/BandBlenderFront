@@ -1,4 +1,5 @@
 import React from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -15,14 +16,16 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-        </Routes>
+        <AuthProvider />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+          </Routes>
+        <AuthProvider />
         <Footer />
       </div>
     </Router>
