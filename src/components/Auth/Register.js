@@ -1,4 +1,5 @@
-import React, { useAuth, useState } from 'react';
+import React, { useState } from 'react';
+import { useAuth } from '../../contexts/AuthContext';
 import axios from 'axios';
 
 const Register = () => {
