@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react';
+import React, { useAuth, useState } from 'react';
 import axios from 'axios';
-import { AuthContext } from '../../contexts/AuthContext';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +9,8 @@ const Register = () => {
     confirmPassword: '',
   });
 
-  const { setAuthState } = useContext(AuthContext);
+
+  const { setAuthState } = useAuth();
 
   const handleInputChange = (event) => {
     setFormData({
