@@ -15,7 +15,7 @@ const Navbar = () => {
             <ul className={styles.navlist}>
                 <li className={styles.navItem}><NavLink to="/" className={({isActive}) => isActive ? styles.active : styles.link}><AiOutlineHome/>Home</NavLink></li>
                 <li className={styles.navItem}><NavLink to="/contact" className={({isActive}) =>  isActive ? styles.active : styles.link}><AiOutlineContacts/>Contact</NavLink></li>
-                <li className={styles.navItem}><NavLink to="/about-me" className={({isActive}) =>  isActive ? styles.active : styles.link}>About me</NavLink></li>
+                <li className={styles.navItem}><NavLink to="/about-me" className={({isActive}) =>  isActive ? styles.active : styles.link}><AiOutlineContacts/>About me</NavLink></li>
                 <li className={styles.navItem}><NavLink to="/Messages" className={({isActive}) =>  isActive ? styles.active : styles.link}><TiMessages/>Messages</NavLink></li>
                 <li className={styles.navItem}><NavLink to="/Profile" className={({isActive}) =>  isActive ? styles.active : styles.link}><CgProfile/>Profile</NavLink></li>
                 <li className={styles.navItem}><NavLink to="/Invitations" className={({isActive}) =>  isActive ? styles.active : styles.link}><RiCalendarTodoFill/>Invitations</NavLink></li>

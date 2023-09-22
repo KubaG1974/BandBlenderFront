@@ -7,7 +7,7 @@ class Home extends React.Component {
         return (
             <div className={styles.content}>
                 <h1>Welcome to BandBlender!</h1>
-                
+                <br />
                 <h2>MUSIC  TASTES  BETTER  TOGETHER</h2>
                 
                 <p>Your one-stop platform to find the perfect band members.

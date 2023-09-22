@@ -1,10 +1,12 @@
+import React from 'react';
+import styles from './About.module.css';
+
 const About = () => {
     return (
-        <div>
-<header>
-        <h1>O Nas - Band Blender</h1>
-    </header>
-
+        <div className={styles.container}>
+            <header className={styles.header}>
+                <h1 className={styles.title}>O Nas - Band Blender</h1>
+            </header>
     <section>
         <h2>Nasza Misja</h2>
         <p>Naszą główną misją jest łączenie muzyków na całym świecie w celu tworzenia niepowtarzalnej muzyki. Wierzymy, że najpiękniejsza muzyka rodzi się wtedy, gdy ludzie o różnych umiejętnościach, stylach i inspiracjach łączą swoje siły. Dlatego stworzyliśmy "Band Blender" jako miejsce, gdzie pasjonaci muzyki mogą odnaleźć swoje muzyczne współbrzmienie.</p>
@@ -29,9 +31,10 @@ const About = () => {
         <p>Jeśli masz pytania, uwagi lub sugestie, jesteśmy otwarci na kontakt. Możesz skontaktować się z nami poprzez <a href="mailto:adres-email@bandblender.com">adres e-mail kontaktowy</a> lub odwiedzić nas na <a href="https://www.bandblender.com">adresie strony internetowej</a>. Jesteśmy tu, aby Ci pomóc w realizacji Twoich muzycznych marzeń!</p>
     </section>
 
-    <footer>
-        <p>Razem tworzymy harmonię, która przemawia do serc i dusz. Dołącz do "Band Blender" i odkryj magię wspólnego muzykowania już dziś!</p>
-    </footer>        </div>
+    <footer className={styles.footer}>
+                <p>Razem tworzymy harmonię, która przemawia do serc i dusz. Dołącz do "Band Blender" i odkryj magię wspólnego muzykowania już dziś!</p>
+            </footer>
+        </div>
     )
 }
 
