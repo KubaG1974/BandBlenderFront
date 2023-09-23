@@ -6,12 +6,12 @@ min-height: 100vh;
 .content h1{
   flex-shrink: 0;
   color: #EC3434;
-  font-family: Smooch Sans;
+  font-family: 'Oswald';
   font-size: 70px;
   font-style: normal;
   font-weight: 600;
   line-height: 108px; /* 110.204% */
-  margin: 0 auto;
+  text-align: center;
 }
 .content {
   flex: 1; /* Wykorzystaj dostępne miejsce */
