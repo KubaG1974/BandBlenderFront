@@ -5,8 +5,8 @@ import {CgProfile} from "react-icons/cg"
 import {RiCalendarTodoFill} from "react-icons/ri"
 import {TbPencilExclamation} from "react-icons/tb"
 import {FiSettings} from "react-icons/fi"
- import styles from './Navbar.module.css';
-
+import styles from './Navbar.module.css';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -22,6 +22,8 @@ const Navbar = () => {
                 <li className={styles.navItem}><NavLink to="/Create-band" className={({isActive}) =>  isActive ? styles.active : styles.link}><TbPencilExclamation/>BandCreator</NavLink></li>
                 <li className={styles.navItem}><NavLink to="/Settings" className={({isActive}) =>  isActive ? styles.active : styles.link}><FiSettings/>Settings</NavLink></li>
             </ul>
+            <div className={styles.log_back}><Link to="/Login" className={styles.login}>Login</Link><br />
+            <Link to="/register" className={styles.register}>Register</Link></div>
         </nav>
     )
 }
