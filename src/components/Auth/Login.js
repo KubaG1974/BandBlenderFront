@@ -1,6 +1,8 @@
 import React from 'react';
 import { loginUser } from '../../services/api';
-
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import styles from './Login.module.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -12,8 +14,9 @@ class Login extends React.Component {
   }
 
   handleInputChange = (event) => {
+    const { name, value } = event.target;
     this.setState({
-      [event.target.name]: event.target.value
+      [name]: value
     });
   };
 
@@ -21,32 +24,67 @@ class Login extends React.Component {
     event.preventDefault();
     try {
       const user = await loginUser(this.state.email, this.state.password);
-      // tutaj do wypełnienia - póki co console.log
       console.log(user);
     } catch (error) {
-      // tutaj do wypełnienia - póki co console.log
       console.log(error);
     }
   };
+
+  
+
+
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Email" 
-          value={this.state.email} 
-          onChange={this.handleInputChange} 
-        />
-        <input 
-          type="password" 
-          name="password" 
-          placeholder="Password" 
-          value={this.state.password} 
-          onChange={this.handleInputChange} 
-        />
-        <button type="submit">Log in</button>
-      </form>
+      <div className={styles.content}>
+        <h1>Welcome to BandBlender!</h1>
+        <br />
+        <h2>MUSIC  TASTES  BETTER  TOGETHER</h2>
+          <form onSubmit={this.handleSubmit}>
+            <TextField 
+              variant="outlined" 
+              label="Email" 
+              type="email" 
+              name="email"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+              margin="normal"
+              InputProps={{
+                style: {
+                  maxHeight: 60, 
+                  borderColor: 'white'
+                }
+              }}
+              InputLabelProps={{
+                style: {
+                  maxHeight: 60
+              }
+              }}
+            />
+            <TextField 
+              variant="outlined" 
+              label="Password" 
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleInputChange}
+              margin="normal"
+              InputProps={{
+                style: {
+                  maxHeight: 60, 
+                  borderColor: 'white'
+                }
+              }}
+              InputLabelProps={{
+                style: {
+                  maxHeight: 60
+              }
+              }}
+            />
+
+            <Button variant="outlined">Log in</Button>      
+          </form>
+      </div>
     );
   }
 }

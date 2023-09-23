@@ -4,6 +4,15 @@ color: aliceblue;
 height: 100vh;
 }
 
+div {
+  min-height: fit-content;
+}
+
+
+ form {
+  padding: 5px;
+  max-height: 200px;
+ }
 
 .content h1{
   flex-shrink: 0;
