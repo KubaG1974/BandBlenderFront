@@ -8,7 +8,6 @@ import Register from './components/Auth/Register';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import Header from './components/Shared/Header';
 import Footer from './components/Shared/Footer';
-import './App.css';
 
 function App() {
   return (
