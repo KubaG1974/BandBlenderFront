@@ -1,7 +1,3 @@
-header {
-    padding: 20px;
-}
-
 h1 {
     color: #EC3434;
     padding: 20px;
@@ -16,8 +12,4 @@ section {
 
 h2 {
     color: green;
-}
-
-footer {
-    padding: 20px;
 }
