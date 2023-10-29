@@ -12,12 +12,17 @@ h1 {
 section {
     padding: 20px;
     line-height: 120%;
+    margin-bottom: 20px;
 }
 
 h2 {
-    color: green;
+    color: red;
 }
 
-footer {
+/* footer {
     padding: 20px;
+} */
+.section li{
+    list-style-type:disc;
 }
+
