@@ -1,4 +1,25 @@
-.contentWrapper{
-    display: grid;
-    grid-template-columns: 2fr 8fr;
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  background: #333; 
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+
+footer {
+  background: #333; 
+  color: #fff; 
+  padding: 20px;
+  text-align: center;
 }

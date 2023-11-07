@@ -1,20 +1,18 @@
+import Header from '../components/Shared/Header'
 import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
+import Footer from '../components/Shared/Footer';
 import {Outlet} from 'react-router-dom';
 import styles from './Root.module.css';
 
 const Root = () => {
     return (
-        <div>
-            
+        <><Header /><div>
             <div className={styles.contentWrapper}>
                 <Navbar />
                 <Outlet />
             </div>
-            
-            <Footer />
-       
-        </div>
+
+        </div><Footer /></>
     )
 }
 
