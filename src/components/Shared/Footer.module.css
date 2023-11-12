@@ -9,3 +9,21 @@
 .active{
     color: red;
 }
+
+
+.h1 {
+  flex-shrink: 0;
+  color: #EC3434;
+  font-family: 'Oswald';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 78px;
+  text-align: center;
+}
+
+.header {
+  display: inline-block;
+  width: 100vw;
+  text-align: left;
+}

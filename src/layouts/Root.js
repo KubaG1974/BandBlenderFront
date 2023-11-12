@@ -6,13 +6,16 @@ import styles from './Root.module.css';
 
 const Root = () => {
     return (
-        <><Header /><div>
-            <div className={styles.contentWrapper}>
-                <Navbar />
-                <Outlet />
+        <>
+        <Header />
+            <div>
+                <div className={styles.contentWrapper}>
+                    <Navbar />
+                    <Outlet />
+                </div>
             </div>
-
-        </div><Footer /></>
+        <Footer />
+        </>
     )
 }
 
