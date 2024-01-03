@@ -47,3 +47,12 @@ height: 100vh;
   max-height: 120px;
   margin: 0 auto;
 }
+.slide {
+  background-color: rgba(0, 0, 0, 0.0);  
+  line-height: 130%;
+  font-family: 'Oswald', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 30px;
+  width: 60%;
+  max-height: 120px;
+  margin: 0 auto;
+}

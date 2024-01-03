@@ -7,11 +7,11 @@ const Contact = () => {
             <header>
                 <h1>Kontakt</h1>
             </header>
-            <section className="contact-info">
+            <div className={styles.contactinfo}>
                 <h2>Dane Kontaktowe</h2>
                 <p>
                     Skontaktuj się z nami w dowolnej chwili. Jesteśmy dostępni, aby odpowiedzieć na Twoje pytania i rozwiać wątpliwości.
-                </p>
+                </p><br/>
                 <ul>
                     <li>
                         <strong>Adres:</strong> ul. Przykładowa 123, 00-000 Miasto
@@ -23,8 +23,8 @@ const Contact = () => {
                         <strong>Email:</strong> kontakt@example.com
                     </li>
                 </ul>
-            </section>
-            <section className="contact-form">
+            </div>
+            <div className={styles.contactform}>
                 <h2>Formularz Kontaktowy</h2>
                 <p>
                     Skorzystaj z formularza poniżej, aby wysłać nam wiadomość. Postaramy się odpowiedzieć jak najszybciej.
@@ -44,7 +44,7 @@ const Contact = () => {
                     </div>
                     <button type="submit">Wyślij</button>
                 </form>
-            </section>
+            </div>
         </div>
     )
 }

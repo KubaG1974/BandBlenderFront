@@ -1,28 +1,63 @@
-header {
-    padding: 20px;
-}
 
-h1 {
-    color: #EC3434;
-    padding: 20px;
-    margin: 10px;
-    font-size: 50px;
-}
-
-section {
-    padding: 20px;
-    line-height: 120%;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: red;
-}
-
-/* footer {
-    padding: 20px;
-} */
 .section li{
     list-style-type:disc;
 }
+ 
 
+.aboutUs {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    color: red;
+    font-size: 2em; 
+  }
+  
+  .mission,
+  .for-whom,
+  .our-vision,
+  .why-choose-us,
+  .gratitude {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: red;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    position: relative;
+  }
+  li::before {
+    content: "•"; /* Dodane znaki (możesz dostosować do własnych preferencji) */
+    color: #555; /* Kolor znaku */
+    font-size: 1.2em; /* Rozmiar znaku */
+    margin-right: 8px; /* Odległość między znakiem a tekstem */
+    vertical-align: middle; /* Ustawienie w pionie */
+    display: inline-block; /* Umożliwia ustawienie w pionie */
+  }
+  .why-choose-us ul {
+    padding-left: 20px;
+  }
+  
+  .why-choose-us li {
+    margin-bottom: 8px;
+  }
+  
+
+  
